@@ -3,10 +3,7 @@ export interface User {
   name: string;
   email: string;
   password: string;
+  address: string;
 }
 
-export interface UserCreateDto {
-  name: string;
-  email: string;
-  password: string;
-}
+export type CreateUserDto = Omit<User, 'id'>;
